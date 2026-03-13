@@ -264,3 +264,31 @@ if analyse:
             st.error(f"LLM error: {e}")
     else:
         st.info("LLM explanation disabled. Toggle it on in the sidebar to get AI-powered analysis.")
+
+
+
+st.sidebar.title("Quick Test Examples")
+
+examples = {
+    "Normal System": {
+        "log": "INFO 2024-01-15 08:23:11 NameNode: Block replicated to 3 nodes successfully\nINFO 2024-01-15 08:24:02 DataNode: Heartbeat received from node 192.168.1.10\nINFO 2024-01-15 08:25:30 HDFS: Checkpoint completed, memory usage at 42%",
+        "label": "Expected: Normal"
+    },
+    "Memory Anomaly": {
+        "log": "CRITICAL 2024-01-15 09:11:22 System: Memory usage at 97%\nERROR 2024-01-15 09:12:45 NameNode: OutOfMemoryError, heap dump triggered\nCRITICAL 2024-01-15 09:13:10 DataNode: Node 192.168.1.5 unresponsive",
+        "label": "Expected: Anomaly"
+    },
+    "Network Failure": {
+        "log": "ERROR 2024-01-15 09:10:05 Network: Packet loss 45%, 3 nodes unreachable\nCRITICAL 2024-01-15 09:11:30 Switch: Port 4 failure detected\nERROR 2024-01-15 09:12:00 DataNode: Failed to connect after 5 retries",
+        "label": "Expected: Anomaly"
+    },
+    "Disk Failure": {
+        "log": "ERROR 2024-01-15 10:05:11 DataNode: Disk I/O timeout on node 192.168.1.20\nCRITICAL 2024-01-15 10:06:22 HDFS: Block blk_9999 lost, no replicas found\nERROR 2024-01-15 10:07:45 System: Disk failure, data recovery initiated",
+        "label": "Expected: Anomaly"
+    }
+}
+
+for name, data in examples.items():
+    if st.sidebar.button(f"Load: {name}"):
+        st.session_state["log_input"] = data["log"]
+        st.sidebar.success(data["label"])
