@@ -1,0 +1,9 @@
+transformers
+torch
+Pillow
+groq
+streamlit
+fastapi
+uvicorn
+scikit-learn
+python-dotenv

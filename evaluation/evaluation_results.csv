@@ -1,0 +1,21 @@
+ID,Ground_Truth,Predicted,Similarity,Correct,Log_Text
+1,NORMAL,ANOMALY,0.2532,NO,A clean green diagram showing nominal system health and perfectly stable connections.
+2,NORMAL,ANOMALY,0.2693,NO,Everything is green and good. Servers are happy and passing health checks.
+3,NORMAL,ANOMALY,0.2811,NO,Green status all around. Operations are nominal and traffic is routing cleanly.
+4,NORMAL,ANOMALY,0.2589,NO,"Blue server diagram. System is cool and stable, operating at 10% capacity."
+5,NORMAL,ANOMALY,0.2485,NO,A beautiful blue infrastructure map. All nodes are online and responding smoothly.
+6,NORMAL,ANOMALY,0.2548,NO,Green lights on all dashboards. The system is doing perfectly fine.
+7,NORMAL,ANOMALY,0.2682,NO,"Green green green! A perfect, happy, error-free system operation."
+8,NORMAL,ANOMALY,0.2181,NO,Blue ocean deployment successful. No downtime observed during rollout.
+9,NORMAL,ANOMALY,0.2578,NO,All metrics are solidly in the green. Nothing to worry about here.
+10,NORMAL,ANOMALY,0.2532,NO,Smooth sailing on the blue network layer. Ping times are consistently low.
+11,ANOMALY,ANOMALY,0.2825,YES,Red alert! Red flames! Everything is broken and glowing red with critical errors!
+12,ANOMALY,ANOMALY,0.2837,YES,Blood red database crash. Total destruction of all persistent storage systems.
+13,ANOMALY,ANOMALY,0.2603,YES,Red ransomware screen. Hackers have destroyed the mainframe and encrypted data.
+14,ANOMALY,ANOMALY,0.2324,YES,Blackout. Complete power failure across the entire data center in sector 4. Dead.
+15,ANOMALY,ANOMALY,0.2583,YES,A black screen of death. The kernel panicked and took down the entire cluster.
+16,ANOMALY,ANOMALY,0.2598,YES,Red angry alien invasion destroying the servers and causing massive physical damage.
+17,ANOMALY,ANOMALY,0.2700,YES,Red explosion in the datacenter. Fire and brimstone. Total catastrophic hardware loss.
+18,ANOMALY,ANOMALY,0.2517,YES,Pitch black terminal. No response from any network interface. We are totally cut off.
+19,ANOMALY,ANOMALY,0.2215,YES,Code red. Storage array offline. Disks are literally melting in the racks.
+20,ANOMALY,ANOMALY,0.2472,YES,Deep black hole detected in routing table. All packets are being dropped into nothingness.

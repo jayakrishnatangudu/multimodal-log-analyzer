@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  log-analyzer:
+    build: .
+    container_name: multimodal-log-analyzer
+    ports:
+      - "8501:8501"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      # Optional: mount huggingface cache so models aren't re-downloaded
+      - ./hf_cache:/root/.cache/huggingface
+    restart: unless-stopped

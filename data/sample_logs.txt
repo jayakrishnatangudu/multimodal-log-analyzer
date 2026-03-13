@@ -1,0 +1,53 @@
+2024-03-13 08:00:01 INFO  nginx: Starting web server on port 80
+2024-03-13 08:00:02 INFO  postgres: Database connection pool initialized (max=20)
+2024-03-13 08:00:05 INFO  app: Application startup complete
+2024-03-13 08:00:10 INFO  app: GET /health 200 OK (3ms)
+2024-03-13 08:00:12 INFO  app: GET /api/v1/users 200 OK (12ms)
+2024-03-13 08:00:15 INFO  app: POST /api/v1/login 200 OK (45ms)
+2024-03-13 08:01:00 INFO  cron: Scheduled backup job started
+2024-03-13 08:01:05 INFO  app: GET /api/v1/dashboard 200 OK (20ms)
+2024-03-13 08:01:30 WARNING app: Response time elevated: GET /api/v1/reports 850ms
+2024-03-13 08:02:00 INFO  app: GET /api/v1/users 200 OK (11ms)
+2024-03-13 08:02:10 ERROR app: Connection timeout – unable to reach redis://cache:6379 after 5s
+2024-03-13 08:02:11 ERROR app: Retry 1/3 – redis://cache:6379
+2024-03-13 08:02:13 ERROR app: Retry 2/3 – redis://cache:6379
+2024-03-13 08:02:15 CRITICAL app: Redis cache unreachable – falling back to DB queries
+2024-03-13 08:02:20 WARNING app: Database query latency increased to 1200ms (threshold: 500ms)
+2024-03-13 08:02:45 INFO  app: GET /api/v1/users 200 OK (1350ms)
+2024-03-13 08:03:00 ERROR auth: Authentication failure for user 'admin' from IP 203.0.113.42
+2024-03-13 08:03:01 ERROR auth: Authentication failure for user 'admin' from IP 203.0.113.42
+2024-03-13 08:03:02 ERROR auth: Authentication failure for user 'admin' from IP 203.0.113.42
+2024-03-13 08:03:03 ERROR auth: Authentication failure for user 'admin' from IP 203.0.113.42
+2024-03-13 08:03:04 ERROR auth: Authentication failure for user 'admin' from IP 203.0.113.42
+2024-03-13 08:03:05 CRITICAL auth: Brute-force lockout triggered for IP 203.0.113.42 (10 failures in 60s)
+2024-03-13 08:03:10 INFO  app: GET /api/v1/products 200 OK (18ms)
+2024-03-13 08:03:30 INFO  app: POST /api/v1/orders 201 Created (65ms)
+2024-03-13 08:04:00 WARNING sys: Memory usage at 82% (used: 6.6GB / total: 8GB)
+2024-03-13 08:04:10 INFO  app: GET /api/v1/users 200 OK (14ms)
+2024-03-13 08:04:30 ERROR disk: I/O error on /dev/sda1 – read failure at sector 0x1A3F
+2024-03-13 08:04:31 ERROR disk: Bad sector detected – filesystem may be corrupted
+2024-03-13 08:04:35 CRITICAL disk: SMART status FAILING – immediate backup recommended
+2024-03-13 08:05:00 INFO  app: GET /api/v1/health 200 OK (4ms)
+2024-03-13 08:05:10 INFO  app: GET /api/v1/orders 200 OK (22ms)
+2024-03-13 08:06:00 WARNING sys: CPU usage spike: 97% for 30s (process: data-exporter pid=8821)
+2024-03-13 08:06:05 INFO  app: GET /api/v1/users 200 OK (16ms)
+2024-03-13 08:06:30 ERROR app: Unhandled exception in worker thread – NullPointerException at DataProcessor.java:142
+2024-03-13 08:06:31 ERROR app: Stack trace: DataProcessor.process() → DataLoader.load() → CacheService.get()
+2024-03-13 08:07:00 INFO  cron: Backup job completed successfully (duration: 6m0s, size: 2.1GB)
+2024-03-13 08:07:10 INFO  app: GET /api/v1/dashboard 200 OK (19ms)
+2024-03-13 08:07:30 INFO  app: POST /api/v1/login 200 OK (42ms)
+2024-03-13 08:08:00 WARNING net: Packet loss detected on eth0 – 8% over last 60s
+2024-03-13 08:08:05 INFO  app: GET /api/v1/users 200 OK (13ms)
+2024-03-13 08:09:00 INFO  app: GET /api/v1/products 200 OK (17ms)
+2024-03-13 08:09:15 ERROR ssl: TLS handshake failed with peer 10.0.0.55 – certificate expired
+2024-03-13 08:09:20 ERROR ssl: Downstream service health check failed: https://payments-svc/health
+2024-03-13 08:10:00 INFO  app: Application running normally
+2024-03-13 08:10:10 INFO  app: GET /api/v1/users 200 OK (11ms)
+2024-03-13 08:10:30 INFO  app: POST /api/v1/orders 201 Created (60ms)
+2024-03-13 08:11:00 WARNING sys: Memory usage at 89% (used: 7.1GB / total: 8GB)
+2024-03-13 08:11:05 CRITICAL sys: OOM Killer invoked – process 'data-exporter' (pid 8821) terminated
+2024-03-13 08:11:10 ERROR app: Worker crash detected – restarting worker pool
+2024-03-13 08:11:20 INFO  app: Worker pool restarted successfully
+2024-03-13 08:12:00 INFO  app: GET /api/v1/health 200 OK (5ms)
+2024-03-13 08:12:10 INFO  app: GET /api/v1/dashboard 200 OK (21ms)
+2024-03-13 08:12:30 INFO  app: All systems nominal
